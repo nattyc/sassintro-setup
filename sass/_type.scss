@@ -62,6 +62,7 @@ h1{
   @include type(1);
   font-family: $header-font-stack;
   margin: 0;
+  text-align: center;
 }
 
 p{

@@ -394,12 +394,6 @@ th {
   padding: 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 button,
 input[type="submit"] {
   border: 1px solid #2459a6;
@@ -684,6 +678,12 @@ dl dd {
   margin: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
 }
@@ -750,9 +750,9 @@ header a {
 }
 .page-head .overlay {
   background-color: rgba(0, 128, 128, 0.4);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 0.4)), color-stop(100%, rgba(0, 128, 0, 0.4)));
-  background-image: -webkit-linear-gradient(-450deg, rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
-  background-image: linear-gradient(180deg,rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 0.4)), color-stop(100%, rgba(128, 0, 128, 0.4)));
+  background-image: -webkit-linear-gradient(-450deg, rgba(0, 128, 128, 0.4), rgba(128, 0, 128, 0.4));
+  background-image: linear-gradient(180deg,rgba(0, 128, 128, 0.4), rgba(128, 0, 128, 0.4));
   display: block;
   position: absolute;
   top: 0px;
@@ -762,10 +762,10 @@ header a {
 }
 .page-head .overlay:after {
   content: '';
-  background-color: rgba(255, 0, 0, 0.1);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 255, 0, 0.2)));
-  background-image: -webkit-linear-gradient(-360deg, rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
-  background-image: linear-gradient(90deg,rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
+  background-color: rgba(128, 0, 128, 0.1);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(128, 0, 128, 0.1)), color-stop(100%, rgba(255, 255, 0, 0.2)));
+  background-image: -webkit-linear-gradient(-360deg, rgba(128, 0, 128, 0.1), rgba(255, 255, 0, 0.2));
+  background-image: linear-gradient(90deg,rgba(128, 0, 128, 0.1), rgba(255, 255, 0, 0.2));
   display: block;
   position: absolute;
   top: 0px;
@@ -779,6 +779,7 @@ h1 {
   font-size: 3.8147rem;
   font-family: "Proxima Nova Rg", "Helvetica Neue", Arial, sans-serif;
   margin: 0;
+  text-align: center;
 }
 
 p {
