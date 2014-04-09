@@ -784,6 +784,12 @@ header .header-logo {
 .page-head h1:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 480px) {
+  .page-head h1 {
+    font-size: 48.82813px;
+    font-size: 3.05176rem;
+  }
+}
 .page-head p {
   float: left;
   display: block;
@@ -865,7 +871,7 @@ header .header-logo {
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
-  height: inherit;
+  height: 15em;
   background-position: cover;
   background-repeat: no-repeat;
   content: "";
@@ -873,8 +879,19 @@ header .header-logo {
 .client-box.billabong:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 480px) {
+  .client-box.billabong {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 46.28851%;
+  }
+  .client-box.billabong:last-child {
+    margin-right: 0;
+  }
+}
 .client-box.billabong:hover {
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: #999933;
 }
 .client-box.stance {
   background-image: url("../img/clients/stance.jpg");
@@ -883,7 +900,7 @@ header .header-logo {
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
-  height: inherit;
+  height: 15em;
   background-position: cover;
   background-repeat: no-repeat;
   content: "";
@@ -891,8 +908,19 @@ header .header-logo {
 .client-box.stance:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 480px) {
+  .client-box.stance {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 46.28851%;
+  }
+  .client-box.stance:last-child {
+    margin-right: 0;
+  }
+}
 .client-box.stance:hover {
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: #999933;
 }
 .client-box.rvca {
   background-image: url("../img/clients/rvca.jpg");
@@ -901,7 +929,7 @@ header .header-logo {
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
-  height: inherit;
+  height: 15em;
   background-position: cover;
   background-repeat: no-repeat;
   content: "";
@@ -909,8 +937,19 @@ header .header-logo {
 .client-box.rvca:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 480px) {
+  .client-box.rvca {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 46.28851%;
+  }
+  .client-box.rvca:last-child {
+    margin-right: 0;
+  }
+}
 .client-box.rvca:hover {
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: #999933;
 }
 .client-box.electric {
   background-image: url("../img/clients/electric.jpg");
@@ -919,7 +958,7 @@ header .header-logo {
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
-  height: inherit;
+  height: 15em;
   background-position: cover;
   background-repeat: no-repeat;
   content: "";
@@ -927,6 +966,17 @@ header .header-logo {
 .client-box.electric:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 480px) {
+  .client-box.electric {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 46.28851%;
+  }
+  .client-box.electric:last-child {
+    margin-right: 0;
+  }
+}
 .client-box.electric:hover {
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: #999933;
 }

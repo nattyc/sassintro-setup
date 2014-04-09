@@ -75,6 +75,9 @@ header{
     }
     h1{
       @include span-columns(12);
+      @include media($mobile) {
+        @include type(2);
+        }
       @include vertical-align;
       text-align: center;
       color: #FFF;
@@ -132,12 +135,15 @@ $clients: billabong, stance, rvca, electric;
              background-image:url("../img/clients/#{$client}.jpg");
              background-size: 100%;
              @include span-columns(3);
-             height: inherit;
+             @include media($mobile) {
+              @include span-columns(2);
+              }
+             height: 15em;
              background-position: cover;
              background-repeat: no-repeat;
              content: "";
              &:hover{
-              @include filter(grayscale(50%));
+              background-color: darken($muted-yellow, 10);
              }
         }
    }
