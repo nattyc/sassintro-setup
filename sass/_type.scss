@@ -77,6 +77,6 @@ a{
   @include link-static;
     &:hover{
     color: #fff;
-    @include link-hover (.75s, 15px);
+    @include link-hover (.75s, 12px);
     }
 }

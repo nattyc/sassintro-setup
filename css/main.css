@@ -394,6 +394,12 @@ th {
   padding: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 button,
 input[type="submit"] {
   border: 1px solid #2459a6;
@@ -678,10 +684,32 @@ dl dd {
   margin: 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+h1 {
+  font-size: 61.03516px;
+  font-size: 3.8147rem;
+  font-family: "Proxima Nova Rg", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Proxima Nova Rg", "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  padding: 0 0 5px;
+  transition: .25s;
+}
+a:hover {
+  color: #fff;
+  border-bottom: 2px solid white;
+  padding: 0 0 12px;
+  transition: 0.75s;
 }
 
 body {
@@ -691,11 +719,37 @@ body {
 header {
   background-color: #333333;
   width: 100%;
-  height: 10em;
+  height: 12em;
 }
 header a {
-  margin-left: 3em;
+  margin: 1.5em 1.5em;
+  padding-top: 1em;
+}
+header nav {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
+}
+header .header-logo {
+  margin: 0 auto 1em;
+  display: block;
+}
+
+.content-block-center {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content-block-center:before, .content-block-center:after {
+  content: " ";
+  display: table;
+}
+.content-block-center:after {
+  clear: both;
 }
 
 .page-head {
@@ -708,7 +762,6 @@ header a {
   position: relative;
   width: 100%;
   display: table;
-  margin-bottom: 1.5em;
   height: 30em;
 }
 .page-head img {
@@ -718,8 +771,7 @@ header a {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-left: 25.58941%;
+  width: 100%;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -736,17 +788,29 @@ header a {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-left: 25.58941%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
   padding: 1em 2em;
   position: relative;
   color: white;
   font-weight: 800;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 999;
 }
 .page-head p:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .page-head p {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .page-head p:last-child {
+    margin-right: 0;
+  }
 }
 .page-head .overlay {
   background-color: rgba(0, 128, 128, 0.4);
@@ -774,30 +838,95 @@ header a {
   left: 0px;
 }
 
-h1 {
-  font-size: 61.03516px;
-  font-size: 3.8147rem;
-  font-family: "Proxima Nova Rg", "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  text-align: center;
+.clients {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 25em;
+  padding-top: 1.5em;
+}
+.clients:before, .clients:after {
+  content: " ";
+  display: table;
+}
+.clients:after {
+  clear: both;
 }
 
-p {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "Proxima Nova Rg", "Helvetica Neue", Arial, sans-serif;
+.client-box {
+  background-size: 100%;
+  margin-top: 1em;
 }
-
-a {
-  text-decoration: none;
-  color: #fff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0);
-  padding: 0 0 5px;
-  transition: .25s;
+.client-box.billabong {
+  background-image: url("../img/clients/billabong.jpg");
+  background-size: 100%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: inherit;
+  background-position: cover;
+  background-repeat: no-repeat;
+  content: "";
 }
-a:hover {
-  color: #fff;
-  border-bottom: 2px solid white;
-  padding: 0 0 15px;
-  transition: 0.75s;
+.client-box.billabong:last-child {
+  margin-right: 0;
+}
+.client-box.billabong:hover {
+  background-color: rgba(0, 128, 128, 0.7);
+}
+.client-box.stance {
+  background-image: url("../img/clients/stance.jpg");
+  background-size: 100%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: inherit;
+  background-position: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+.client-box.stance:last-child {
+  margin-right: 0;
+}
+.client-box.stance:hover {
+  background-color: rgba(0, 128, 128, 0.7);
+}
+.client-box.rvca {
+  background-image: url("../img/clients/rvca.jpg");
+  background-size: 100%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: inherit;
+  background-position: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+.client-box.rvca:last-child {
+  margin-right: 0;
+}
+.client-box.rvca:hover {
+  background-color: rgba(0, 128, 128, 0.7);
+}
+.client-box.electric {
+  background-image: url("../img/clients/electric.jpg");
+  background-size: 100%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: inherit;
+  background-position: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+.client-box.electric:last-child {
+  margin-right: 0;
+}
+.client-box.electric:hover {
+  background-color: rgba(0, 128, 128, 0.7);
 }

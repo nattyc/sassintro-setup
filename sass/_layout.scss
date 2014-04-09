@@ -1,3 +1,6 @@
+$mobile: new-breakpoint(max-width 480px 4);
+
+
 //Positioning Mixins
 
 @mixin vertical-align {
@@ -6,6 +9,12 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -18,14 +27,27 @@ body{
 header{
   background-color: $primary-grey;
   width: 100%;
-  height: 10em;
+  height: 12em;
   a{
-    margin-left: 3em;
+    margin: 1.5em 1.5em;
+    padding-top: 1em;
+  }
+  nav{
+    @include vertical-align;
     text-align: center;
+  }
+  .header-logo{
+    margin: 0 auto 1em;
+    display: block;
   }
 }
 
 //Deals with positioning on top intro image
+
+.content-block-center{
+  @include outer-container;
+}
+
 .page-head{
   $image-gradient-color-top: teal;
   $transparency-top: .6;
@@ -47,27 +69,29 @@ header{
   position: relative;
   width: 100%;
   display: table;
-  margin-bottom: $base-line-height;
   height: 30em;
     img{
       width: 100%;
     }
     h1{
-      @include span-columns(6);
-      @include shift(3);
+      @include span-columns(12);
       @include vertical-align;
       text-align: center;
       color: #FFF;
       z-index: 999;
     }
     p{
-      @include span-columns(6);
-      @include shift(3);
+      @include span-columns(8);
+      @include shift(2);
+        @include media($mobile) {
+        @include span-columns(4);
+        @include shift(0);
+      }
       padding: 1em 2em;
       position: relative;
       color: white;
       font-weight: 800;
-      background-color: transparentize(black, .6);
+      background-color: transparentize(black, .8);
       z-index: 999;
       }
     //color overlay shiz
@@ -85,5 +109,37 @@ header{
         @include position(absolute, 0px 0px 0px 0px);
     }
   }
+
+
 }
+
+.clients{
+    @include outer-container;
+    height: 25em;
+    padding-top: 1.5em;
+  }
+
+$clients: billabong, stance, rvca, electric;
+
+.client-box {
+   // client div properties
+   background-size: 100%;
+   margin-top: 1em;
+
+   // client setup
+   @each $client in $clients {
+        &.#{$client} {
+             background-image:url("../img/clients/#{$client}.jpg");
+             background-size: 100%;
+             @include span-columns(3);
+             height: inherit;
+             background-position: cover;
+             background-repeat: no-repeat;
+             content: "";
+             &:hover{
+              @include filter(grayscale(50%));
+             }
+        }
+   }
+ }
 
